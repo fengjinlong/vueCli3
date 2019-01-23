@@ -1,15 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+  <div class="dd">
+    11111111
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
 export default {
-  name: 'home',
-  components: {
+  name: '',
+  created () {
+
+  },
+  data () {
+    return {}
   }
 }
+
 </script>
+
+<style lang='stylus' rel='stylesheet/stylus' scoped>
+  .dd
+    color red
+</style>
