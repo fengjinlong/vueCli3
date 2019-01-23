@@ -10,6 +10,7 @@ module.exports = {
       .set("@", resolve("src"))
       .set("utils", resolve("src/views"))
   },
+  // http://localhost:8080/publicPath
   // publicPath: process.env.NODE_ENV === 'production' ? '/111111' : '/222222222',
   configureWebpack: config => {
     console.log(process.env.NODE_ENV)
