@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     btn () {
+      // https://juejin.im/post/5a52c9a4f265da3e2a0d6b74#heading-8
       // let str = 'https://www.baidu.com/'
       let str = '/api'
       // console.log(Axios.get('/api/syncStuCourseRecord/loadRecord?pageNum=1&pageSize=20'))
