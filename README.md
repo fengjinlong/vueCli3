@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-npm install
+npm install  记录   history 不能刷新
 ```
 
 ### Compiles and hot-reloads for development

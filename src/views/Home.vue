@@ -1,7 +1,6 @@
 <template>
   <div class="div">
-    99999
-    <img alt="Vue logo" src="../assets/logo.png">
+    99999666y111qqq
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
