@@ -9,8 +9,12 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ELEMENT)
 
 Vue.config.productionTip = false
-console.log(process.env.NODE_ENV)
 new Vue({
+  data () {
+    return {
+      dddd: 666
+    }
+  },
   router,
   store,
   render: h => h(App)
