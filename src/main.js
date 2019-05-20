@@ -9,10 +9,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ELEMENT)
 
 Vue.config.productionTip = false
+// console.log(Vue)
+console.log(Vue.prototype.$watch)
+console.log(Vue._watchs)
+console.log(Vue.prototype)
 new Vue({
   data () {
     return {
-      dddd: 666
     }
   },
   router,

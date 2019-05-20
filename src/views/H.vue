@@ -1,26 +1,21 @@
 <template>
   <div class="div">
-    {{aaa}}
-    {{b}}
-    <H></H>
+    {{a}}
   </div>
 </template>
 
 <script>
-import H from '@/views/H.vue'
 // @ is an alias to /src
 
 export default {
-  name: 'home',
-  components: {
-    H
-  },
+  name: 'HHHHH',
   created () {
+    // console.log(Vue.prototype)
+    console.log(this._watchers)
   },
   data () {
     return {
-      aaa: 1,
-      b: [1]
+      a: 22
     }
   }
 }
