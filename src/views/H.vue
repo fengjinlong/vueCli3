@@ -1,40 +1,25 @@
 <template>
   <div class="div">
-    {{a}}
-    <HH></HH>
+    <!-- <a style="display:block" href="javascript:void(0)" v-for="(ele,i) in arr" :key="i">{{ele}}</a> -->
+    <span>
+  <slot name="slotProps" v-bind:user="user">
+    {{ user.lastName }}
+  </slot>
+</span>
   </div>
 </template>
 
 <script>
-import HH from '@/views/HH.vue'
 // @ is an alias to /src
 
 export default {
-  name: 'HHHHH',
-  beforeCreate () {
-    console.log('H beforeCreate')
-  },
+  name: 'slotProps',
   created () {
-    console.log('H created')
-  },
-  beforeMount () {
-    console.log('H beforeMount')
-  },
-  mounted () {
-    console.log('H mounted')
-  },
-  beforeDestroy () {
-    console.log('H beforeDestroy')
-  },
-  destroyed () {
-    console.log('H destroyed')
-  },
-  components: {
-    HH
+    // console.log(Vue.prototype)
   },
   data () {
     return {
-      a: 22
+      user: [1, 2, 3, 4, 5]
     }
   }
 }

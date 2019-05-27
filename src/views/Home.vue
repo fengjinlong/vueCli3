@@ -1,16 +1,14 @@
 <template>
   <div class="div">
-    <!-- <H></H> -->
-    <Throttle :time="1000" events="click">
-      <button @click="fff">{{val}}</button>
-    </Throttle>
-    <P></P>
+    <H>
+      <template v-slot:default="slotProps">
+    {{ slotProps.user.firstName }}
+  </template>
+    </H>
   </div>
 </template>
 
 <script>
-import Throttle from '@/commonComponent/f/v.js'
-import P from './p.vue'
 // import H from '@/views/H.vue'
 // @ is an alias to /src
 
@@ -27,8 +25,6 @@ export default {
     }
   },
   components: {
-    Throttle,
-    P
   },
   data () {
     return {
