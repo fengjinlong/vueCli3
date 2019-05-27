@@ -1,26 +1,40 @@
 <template>
   <div class="div">
-    {{aaa}}
-    {{b}}
-    <H></H>
+    <!-- <H></H> -->
+    <Throttle :time="1000" events="click">
+      <button @click="fff">{{val}}</button>
+    </Throttle>
+    <P></P>
   </div>
 </template>
 
 <script>
-import H from '@/views/H.vue'
+import Throttle from '@/commonComponent/f/v.js'
+import P from './p.vue'
+// import H from '@/views/H.vue'
 // @ is an alias to /src
 
 export default {
   name: 'home',
-  components: {
-    H
+  methods: {
+    ff () {
+      this.$nextTick(function () {
+        this.val++
+      })
+    },
+    fff () {
+      this.val++
+    }
   },
-  created () {
+  components: {
+    Throttle,
+    P
   },
   data () {
     return {
       aaa: 1,
-      b: [1]
+      b: [1],
+      val: 1
     }
   }
 }

@@ -1,40 +1,37 @@
 <template>
   <div class="div">
     {{a}}
-    <HH></HH>
   </div>
 </template>
 
 <script>
-import HH from '@/views/HH.vue'
 // @ is an alias to /src
 
 export default {
-  name: 'HHHHH',
+  name: 'HH',
   beforeCreate () {
-    console.log('H beforeCreate')
+    console.log('HH beforeCreate')
   },
   created () {
-    console.log('H created')
+    console.log('HH created')
   },
   beforeMount () {
-    console.log('H beforeMount')
+    console.log('HH beforeMount')
   },
   mounted () {
-    console.log('H mounted')
+    console.log('HH mounted')
   },
   beforeDestroy () {
-    console.log('H beforeDestroy')
+    console.log('HH beforeDestroy')
   },
   destroyed () {
-    console.log('H destroyed')
+    console.log('HH destroyed')
   },
   components: {
-    HH
   },
   data () {
     return {
-      a: 22
+      a: 222
     }
   }
 }
