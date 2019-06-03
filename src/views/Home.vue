@@ -1,15 +1,11 @@
 <template>
   <div class="div">
-    <H>
-      <template v-slot:default="slotProps">
-    {{ slotProps.user.firstName }}
-  </template>
-    </H>
+    <P v-model="tags"></P>
   </div>
 </template>
 
 <script>
-// import H from '@/views/H.vue'
+import P from '@/views/p.vue'
 // @ is an alias to /src
 
 export default {
@@ -25,9 +21,11 @@ export default {
     }
   },
   components: {
+    P
   },
   data () {
     return {
+      tags: ['test1', 'test2'],
       aaa: 1,
       b: [1],
       val: 1

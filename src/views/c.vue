@@ -1,32 +1,50 @@
-<!--  -->
-<template>
-<div class=''></div>
-</template>
-
-<script  type='text/ecmascript-6'>
-
+<script>
 export default {
-  name: '',
-  components: {},
-  data () {
-    return {
-
+  props: {
+    value: {
+      type: Array
     }
   },
-  created () {
-
+  data () {
+    return {
+      newTag: ''
+    }
   },
-  computed: {},
-  watch: {},
   methods: {
-
+    addTag () {
+      if (this.newTag.trim().length === 0 || this.value.includes(this.newTag.trim())) {
+        return
+      }
+      this.$emit('input', [...this.value, this.newTag.trim()])
+      this.newTag = ''
+    },
+    removeTag (tag) {
+      this.$emit('input', this.value.filter(t => t !== tag))
+    }
   },
-  mounted () {
 
+  render () {
+    return this.$scopedSlots.default({
+      v: this.newTag,
+      tags: this.value,
+      addTag: this.addTag,
+      removeTag: this.removeTag,
+      inputEvents: {
+        input: e => {
+          this.newTag = e.target.value
+        },
+        keydown: e => {
+          if (e.keyCode === 13) {
+            e.preventDefault()
+            this.addTag()
+          }
+        }
+      },
+      inputAttrs: {
+        value: this.newTag,
+        placeholder: '123123Add tag...'
+      }
+    })
   }
 }
 </script>
-<style rel='stylesheet/stylus' lang='stylus' scoped>
-//@import url()
-
-</style>
